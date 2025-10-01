@@ -14,14 +14,11 @@ export default async function Page() {
   // }
 
   const session = await getSession()
-
   if (!session) unauthorized()
 
   return (
     <div>
       <h1>Dashboard Home</h1>
-      session:
-      <pre>{JSON.stringify(session, null, 2)}</pre>
     </div>
   )
 }

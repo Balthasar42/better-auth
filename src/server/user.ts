@@ -1,11 +1,7 @@
 "use server"
 
 import { auth } from "@/lib/auth"
-
-interface ServerActionResponse {
-  success: boolean
-  message: string
-}
+import type { ServerActionResponse } from "./types"
 
 interface SignInProps {
   email: string

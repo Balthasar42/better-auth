@@ -1,13 +1,12 @@
 "use client"
 
 import { zodResolver } from "@hookform/resolvers/zod"
-import { LoaderCircle } from "lucide-react"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { toast } from "sonner"
 import { z } from "zod"
-import { Button } from "@/components/ui/button"
+import { LoadingButton } from "@/components/atoms/loading-button"
 import {
   Form,
   FormControl,
@@ -119,13 +118,14 @@ export function SignupForm({ className, ...props }: SignUpProps) {
           )}
         />
 
-        <Button type="submit" className="w-full" disabled={isLoading}>
-          {isLoading ? (
-            <LoaderCircle className="size-4 animate-spin" />
-          ) : (
-            "Sign up"
-          )}
-        </Button>
+        <LoadingButton
+          type="submit"
+          className="w-full"
+          loading={isLoading}
+          disabled={!form.formState.isDirty}
+        >
+          Sign up
+        </LoadingButton>
       </form>
     </Form>
   )

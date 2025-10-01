@@ -22,7 +22,7 @@ export default function Page() {
           <SignupForm />
           <div className="flex justify-center">
             <Button asChild variant={"link"}>
-              <Link href={"/login"}>Already have an account? Login</Link>
+              <Link href={"/signin"}>Already have an account? Sign in</Link>
             </Button>
           </div>
         </CardContent>
