@@ -1,7 +1,7 @@
 import { betterAuth } from "better-auth"
 import { drizzleAdapter } from "better-auth/adapters/drizzle"
 import { nextCookies } from "better-auth/next-js"
-import { lastLoginMethod } from "better-auth/plugins"
+// import { lastLoginMethod } from "better-auth/plugins"
 import { db } from "@/db/drizzle"
 import { schema } from "@/db/schema"
 
@@ -16,5 +16,8 @@ export const auth = betterAuth({
     // requireEmailVerification: true,
   },
 
-  plugins: [lastLoginMethod(), nextCookies()],
+  plugins: [
+    // lastLoginMethod(),
+    nextCookies(),
+  ],
 })
