@@ -13,8 +13,8 @@ import { getSession } from "@/lib/get-session"
 const data = {
   navMain: [
     { title: "Dashboard", url: "/dashboard" },
-    { title: "Team", url: "/dashboard/team" },
-    { title: "Projects", url: "/dashboard/projects" },
+    // { title: "Team", url: "/dashboard/team" },
+    // { title: "Projects", url: "/dashboard/projects" },
   ],
   navSecondary: [{ title: "Account", url: "/account" }],
 }
